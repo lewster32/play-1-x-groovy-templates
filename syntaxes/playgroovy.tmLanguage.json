@@ -1,0 +1,43 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "Play 1.x Groovy Template",
+	"patterns": [
+		{
+			"include": "#playgroovy-code"
+		},
+		{
+			"include": "text.html.derivative"
+		}
+	],
+	"repository": {
+		"playgroovy-code": {
+			"patterns": [
+				{
+					"name": "meta.embedded.block.groovy",
+					"begin": "%{",
+					"end": "}%",
+					"patterns": [{
+						"include": "source.groovy"
+					}]
+				},
+				{
+					"name": "meta.embedded.tag.if",
+					"begin": "#{if\\s",
+					"end": "}",
+					"patterns": [{
+						"include": "source.groovy"
+					}]
+				},
+				{
+					"name": "meta.embedded.tag.elseif",
+					"begin": "#{elseif\\s",
+					"end": "}",
+					"patterns": [{
+						"include": "source.groovy"
+					}]
+				}
+			]
+		}
+	},
+	"scopeName": "text.html.playgroovy"
+}

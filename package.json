@@ -1,0 +1,33 @@
+{
+  "name": "play-1-x-groovy-templates",
+  "displayName": "Play 1.x Groovy Templates",
+  "description": "Play 1.x Groovy template support",
+	"publisher": "Lewis Lane",
+	"license": "MIT",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.54.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "playgroovy",
+      "aliases": ["Play 1.x Groovy Template", "playgroovy"],
+      "extensions": [".html",".tag"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "playgroovy",
+      "scopeName": "text.html.playgroovy",
+      "path": "./syntaxes/playgroovy.tmLanguage.json",
+      "embeddedLanguages": {
+        "text.html": "html",
+        "text.xml": "xml",
+        "source.js": "javascript",
+        "source.css": "css"
+      }
+    }]
+  }
+}
