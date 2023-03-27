@@ -6,6 +6,9 @@
 			"include": "#tags"
 		},
 		{
+			"include": "#punctuations"
+		},
+		{
 			"include": "#comment"
 		},
 		{
@@ -29,7 +32,7 @@
 				}
 			]
 		},
-		"tags": {
+		"punctuations": {
 			"patterns": [
 				{
 					"name": "meta.embedded.block.groovy",
@@ -40,7 +43,11 @@
 							"include": "source.groovy"
 						}
 					]
-				},
+				}
+			]
+		},
+		"tags": {
+			"patterns": [
 				{
 					"name": "meta.embedded.tag.if",
 					"begin": "#{(?:else)?if\\s",
